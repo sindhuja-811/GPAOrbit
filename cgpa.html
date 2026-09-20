@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator | GPAOrbit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">🎓 GPAOrbit</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sgpa.html">SGPA</a></li>
+        <li><a href="cgpa.html">CGPA</a></li>
+    </ul>
+</nav>
+
+<div class="container fade-in">
+
+    <div class="calculator">
+
+        <h1>📈 CGPA Calculator</h1>
+
+        <p style="text-align:center;margin-bottom:25px;">
+            Your CGPA is automatically calculated from the saved semester SGPAs.
+        </p>
+
+        <div class="cgpa-grid">
+
+            <div class="semester">
+                <h3>Semester 1</h3>
+                <p id="cgpaSem1">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 2</h3>
+                <p id="cgpaSem2">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 3</h3>
+                <p id="cgpaSem3">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 4</h3>
+                <p id="cgpaSem4">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 5</h3>
+                <p id="cgpaSem5">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 6</h3>
+                <p id="cgpaSem6">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 7</h3>
+                <p id="cgpaSem7">Not Saved</p>
+            </div>
+
+            <div class="semester">
+                <h3>Semester 8</h3>
+                <p id="cgpaSem8">Not Saved</p>
+            </div>
+
+        </div>
+
+        <div class="result-card">
+
+            <h2 id="cgpaResult">
+                CGPA : 0.00
+            </h2>
+
+            <br>
+
+            <button class="btn" onclick="calculateCGPA()">
+                🔄 Refresh CGPA
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 GPAOrbit • Track Every Grade. Reach Every Goal.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
