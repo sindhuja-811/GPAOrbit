@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGPA Calculator | GPAOrbit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🎓 GPAOrbit</div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="sgpa.html">SGPA</a></li>
+        <li><a href="cgpa.html">CGPA</a></li>
+    </ul>
+</nav>
+
+<div class="container fade-in">
+    <h2>Student Details</h2>
+
+<label>Student Name</label><br>
+<input type="text" id="studentName" placeholder="Enter Student Name"><br><br>
+
+<label>Roll Number</label><br>
+<input type="text" id="rollNo" placeholder="Enter Roll Number"><br><br>
+
+<label>Year</label><br>
+<select id="year">
+    <option>1st Year</option>
+    <option>2nd Year</option>
+    <option>3rd Year</option>
+    <option>4th Year</option>
+</select>
+
+<br><br>
+
+<div class="calculator">
+
+<h1>🎓 SGPA Calculator</h1>
+
+<p style="text-align:center;margin-bottom:25px;">
+Select your semester, enter subjects, credits and grades.
+</p>
+
+<div class="semester-select">
+
+<label>Select Semester</label>
+
+<select id="semester">
+    <option value="1">Semester 1</option>
+    <option value="2">Semester 2</option>
+    <option value="3">Semester 3</option>
+    <option value="4">Semester 4</option>
+    <option value="5">Semester 5</option>
+    <option value="6">Semester 6</option>
+    <option value="7">Semester 7</option>
+    <option value="8">Semester 8</option>
+</select>
+
+</div>
+
+<table id="subjectTable">
+
+<tr>
+    <th>Subject</th>
+    <th>Credits</th>
+    <th>Grade</th>
+    <th>Remove</th>
+</tr>
+
+<tr>
+
+<td>
+<input type="text" placeholder="Subject Name">
+</td>
+
+<td>
+<input
+type="number"
+class="credit"
+placeholder="Credits"
+min="0.5"
+step="0.5">
+</td>
+
+<td>
+
+<select class="grade">
+<option value="10">S</option>
+<option value="9">A</option>
+<option value="8">B</option>
+<option value="7">C</option>
+<option value="6">D</option>
+<option value="5">E</option>
+<option value="0">F</option>
+</select>
+
+</td>
+
+<td style="text-align:center;">
+<button onclick="removeRow(this)" class="btn">
+❌
+</button>
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+<button class="btn" onclick="addSubject()">
+➕ Add Subject
+</button>
+
+<button class="btn secondary" onclick="calculateSGPA()">
+🎓 Calculate SGPA
+</button>
+
+<button class="btn" onclick="saveSemester()">
+💾 Save Semester
+</button>
+
+<button class="btn secondary" onclick="resetSemester()">
+🔄 Reset
+</button>
+
+<div class="result-card">
+
+<h2 id="result">
+SGPA : 0.00
+</h2>
+
+<p id="totalCredits">
+Total Credits : 0
+</p>
+
+</div>
+</div>
+
+</div>
+
+<footer>
+    © 2026 GPAOrbit • Track Every Grade. Reach Every Goal.
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
